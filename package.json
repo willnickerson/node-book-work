@@ -1,0 +1,15 @@
+{
+  "name": "node-beginners-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.0.17"
+  }
+}
