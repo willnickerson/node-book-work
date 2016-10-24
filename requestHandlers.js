@@ -3,7 +3,7 @@ var queryString = require('querystring'),
   fs = require('fs'),
   formidable = require('formidable');
 
-function start(response, postData) {
+function start(response) {
   console.log('Request handler "start" was called');
 
   var body = '<html>' +
@@ -24,7 +24,7 @@ function start(response, postData) {
   response.end();
 }
 
-function upload(response, postData) {
+function upload(response, request) {
   console.log('Request handler "upload" was called');
 
   var form = new formidable.IncomingForm();
@@ -40,7 +40,7 @@ function upload(response, postData) {
     });
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.write('received image:<br>');
-    response.write('<img src="/show">');
+    response.write('<img src="/show" />');
     response.end();
   });
 }
